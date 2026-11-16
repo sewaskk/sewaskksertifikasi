@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"><!-- Event snippet for Kontak conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18577628549/p7NPCOOpx7kdEIW7wJpF',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKK Sertifikasi Konstruksi - Mitra Legalitas & Kompetensi Anda</title>
   <!-- Tailwind CSS -->
@@ -1129,7 +1144,9 @@
           </a>
           <a href="https://wa.me/6282130743332?text=Halo%20Admin,%20saya%20mau%20Tanya%20Paket%20Bundling%20SBU" target="_blank" class="block p-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg border border-slate-300 font-semibold transition-colors">
             <i class="fa-solid fa-box mr-1"></i> Tanya Paket Terima Beres SBU
-          </a>
+     </a> href="https://wa.me/6282130743332?text=Halo%20Admin,%20saya%20mau%20konsultasi" onclick="return gtag_report_conversion('https://wa.me/6282130743332');" target="_blank" class="block p-2 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 rounded-lg border border-emerald-300 transition-all font-medium text-center">
+    <i class="fa-brands fa-whatsapp mr-1"></i> Chat WhatsApp Sekarang
+    </a>
         </div>
       </div>
     </div>
